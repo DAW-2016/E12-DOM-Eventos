@@ -1,0 +1,14 @@
+.cards, .found{
+  height: 140px;
+  width: 140px;
+  display: none;
+}
+.cardsImg {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#pontuation {
+  display: none;
+}
