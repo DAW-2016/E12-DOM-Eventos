@@ -1,3 +1,22 @@
+/*Modificação na classe navbar*/
+.navbar{
+  border-radius: 0px;
+  border: 0px;
+  font-weight: bolder;
+}
+
+.ativo{
+  background-color: #c62828;
+}
+
+/*Modificação na classe jumbotron*/
+.container .jumbotron,
+.container-fluid .jumbotron{
+  border-radius: 0px;
+  margin-top: -20px;
+  padding-left: 6.5%;
+}
+
 /*Modificação na velocidade da fa-spin*/
 .fa-spin {
   -webkit-animation: fa-spin 0.7s infinite linear;
@@ -15,8 +34,11 @@
 }
 
 /*Parte dedicada a cores de containers*/
-.vermelho{
-  background-color: #d50000 ;
+.vermelho1{
+  background-color: #d50000;
+}
+.vermelho2{
+  background-color: #b71c1c;
 }
 .branco{
   background-color: #efebe9;
@@ -36,8 +58,13 @@
 /*Rodape*/
 .rodape{
   margin-top: 1%;
-  margin-bottom: 1%;
   padding-top: 2%;
   padding-bottom: 2%;
-  border-radius: 5px;
+}
+.rodapezinho{
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 3.5%;
+  font-weight: bolder;
+
 }
