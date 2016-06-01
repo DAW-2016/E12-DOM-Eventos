@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 vermelho texto-branco jumbotron">
           <center><h1>DOM: javascript</h1></center>
-          <center><p>De graça, hoje e sempre.</p></center>
+          <center><p>Exercícios 1&2</p></center>
         </div>
       </div>
 
@@ -27,46 +27,23 @@
           <center><h1>Login</h1><i class="fa fa-sign-in fa-3x texto-vermelho" aria-hidden="true"></i></center><br>
           <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
           <div class="input-group col-xs-12 col-sm-10 col-md-10 col-lg-10">
-            <input type="text" id="input1" class="form-control" placeholder="Usuário" aria-describedby="basic-addon1" onfocus="roda('verify_icon_1')" onblur="verifica('verify_icon_1','input1')">
+            <input type="text" id="input1" class="form-control" placeholder="Usuário" aria-describedby="basic-addon1" onfocus="roda('verify_icon_1')" onblur="verificaUserName('verify_icon_1','input1')">
             <span class="input-group-addon"><i id="verify_icon_1" class="fa fa-2x fa-ellipsis-h" aria-hidden="true"></i></span>
-          </div><br>
+          </div>
+          <center><h4><span id="info_error_username" class="label label-danger"></span></h4></center><br>
           <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
           <div class="input-group col-xs-12 col-sm-10 col-md-10 col-lg-10">
-            <input type="password" id="input2" class="form-control" placeholder="Senha" aria-describedby="basic-addon2" onfocus="roda('verify_icon_2')" onblur="verifica('verify_icon_2','input2')">
+            <input type="password" id="input2" class="form-control" placeholder="Senha" aria-describedby="basic-addon2" onfocus="roda('verify_icon_2')" onblur="verificaSenha('verify_icon_2','input2')">
             <span class="input-group-addon"><i id="verify_icon_2" class="fa fa-2x fa-ellipsis-h" aria-hidden="true"></i></span>
           </div>
-          <br>
-          <center><button type="button" name="login" class="btn btn-default">Entrar</button></center>
-          <center><h1>Cadastre-se</h1><i class="fa fa-user-plus fa-3x texto-vermelho" aria-hidden="true"></i></center><br>
-          <div class="row">
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
-            <div class="input-group col-xs-12 col-sm-10 col-md-10 col-lg-10">
-              <input type="text" class="form-control" placeholder="Nome" aria-describedby="basic-addon3_1">
-              <span class="input-group-addon" id="verify3_1"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-            </div><br>
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
-            <div class="input-group col-xs-12 col-sm-10 col-md-10 col-lg-10">
-              <input type="text" class="form-control" placeholder="Sobre nome" aria-describedby="basic-addon3_2">
-              <span class="input-group-addon" id="verify3_2"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-            </div>
-          </div><br>
-          <div class="row">
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
-            <div class="input-group col-xs-12 col-sm-10 col-md-10 col-lg-10">
-              <input type="text" class="form-control" placeholder="@email" aria-describedby="basic-addon4_1">
-              <span class="input-group-addon" id="verify4_2"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-            </div><br>
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
-            <div class="input-group col-xs-12 col-sm-10 col-md-10 col-lg-10">
-              <input type="text" class="form-control" placeholder="Senha" aria-describedby="basic-addon4_2">
-              <span class="input-group-addon" id="verify4_2"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-            </div>
-          </div><br>
+          <center><h4><span id="info_error_password" class="label label-danger"></span></h4></center><br>
+          <center><button type="button" name="login" class="btn btn-default" onclick="cresce('input1','input2')">Entrar</button></center>
         </div>
+
         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
           <center><h1>Lorem?</h1><i class="fa fa-question fa-3x texto-vermelho" aria-hidden="true"></i></center>
           <p class="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p class="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
         </div>
       </div>
 
@@ -101,34 +78,8 @@
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   </body>
-  <script type="text/javascript">
-    function roda(objectID){
-      var obj = document.getElementById(objectID);
-      obj.setAttribute("class", "fa fa-spinner fa-2x fa-spin");
-    }
-
-    function verifica(objectID,objectFatherID){
-      var obj = document.getElementById(objectID);
-      var objPai = document.getElementById(objectFatherID);
-      if(verificaNome(objPai.value)==false){
-        obj.setAttribute("class", "fa fa-2x fa-ban texto-vermelho");
-      }else{
-        obj.setAttribute("class","fa fa-2x fa-check-circle-o texto-verde");
-      }
-    }
-
-    function verificaNome(value){
-      if(value=="")
-        return false;
-      for(var i=0; i<value.length; i++){
-        if(!isLetter(value[i]))
-          return false;
-      }
-      return true;
-    }
-    function isLetter(str) {
-      return str.match(/[a-z]/i);
-    }
+  <script type="text/javascript" src="funfa.js">
   </script>
 </html>
