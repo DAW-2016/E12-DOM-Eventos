@@ -15,6 +15,16 @@ var error401 = 401;
 /////////////////////////////////////////////////////////////////////////
 
 
+function cresce(name1,name2){
+    var input1 = document.getElementById(name1);
+    var input2 = document.getElementById(name2);
+
+    input1.value = input1.value.toUpperCase();
+
+    input2.setAttribute("type","text");
+    input2.value = input2.value.toUpperCase();
+}
+
 function roda(objectID){
   var obj = document.getElementById(objectID);
   obj.setAttribute("class", "fa fa-spinner fa-2x fa-spin");
