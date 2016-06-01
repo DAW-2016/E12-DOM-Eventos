@@ -1,0 +1,43 @@
+/*Modificação na velocidade da fa-spin*/
+.fa-spin {
+  -webkit-animation: fa-spin 0.7s infinite linear;
+  animation: fa-spin 0.7s infinite linear;
+}
+
+/*Formulários*/
+.form-control{
+  height: 42px;
+}
+
+/*Parte dedicada a texto*/
+.justify{
+  text-align: justify;
+}
+
+/*Parte dedicada a cores de containers*/
+.vermelho{
+  background-color: #d50000 ;
+}
+.branco{
+  background-color: #efebe9;
+}
+
+/*Parte dedicada a cores de texto*/
+.texto-vermelho{
+  color: #d50000 ;
+}
+.texto-branco{
+  color: #efebe9;
+}
+.texto-verde{
+  color: #00c853;
+}
+
+/*Rodape*/
+.rodape{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 5px;
+}
