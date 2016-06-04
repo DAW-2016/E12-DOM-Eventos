@@ -4,21 +4,21 @@
   -webkit-transform: scale(0, 1);
   -ms-transform: scale(0, 1);
   transform: scale(0, 1);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .viraCartaPraFrente2{
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .viraCartaPraTras1{
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   transform: scale(1, 1);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 /*Modificação na classe navbar*/

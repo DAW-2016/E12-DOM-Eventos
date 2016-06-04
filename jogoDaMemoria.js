@@ -81,15 +81,15 @@ function vira(nomeObj){
   if(objFilho.getAttribute('src')=="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg"){
     obj.setAttribute("class","thumbnail viraCartaPraFrente1");
     setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraFrente2");},
-                          500);
+                          300);
     setTimeout(function(){objFilho.setAttribute("src",arrayObjSorteado[nomeObj])},
-                          500);
+                          300);
   }else{
     obj.setAttribute("class","thumbnail viraCartaPraFrente1");
     setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraTras1");},
-                          500);
+                          300);
     setTimeout(function(){objFilho.setAttribute("src","http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg")},
-                          500);
+                          300);
   }
 
   }
