@@ -1,3 +1,5 @@
+var arrayObjSorteado = [];
+
 function sorteia(obj1,obj2,obj3,obj4,obj5,obj6,obj7,obj8,obj9,obj10,obj11,obj12,obj13,obj14,obj15,obj16){
   var carta1 = "fotos/sla.jpg";
   var carta2 = "fotos/caribe.jpg";
@@ -43,40 +45,22 @@ function sorteia(obj1,obj2,obj3,obj4,obj5,obj6,obj7,obj8,obj9,obj10,obj11,obj12,
     console.log(arraySorteado[i]);
   }
 
-  var objC1 = document.getElementById(obj1);
-  var objC2 = document.getElementById(obj2);
-  var objC3 = document.getElementById(obj3);
-  var objC4 = document.getElementById(obj4);
-  var objC5 = document.getElementById(obj5);
-  var objC6 = document.getElementById(obj6);
-  var objC7 = document.getElementById(obj7);
-  var objC8 = document.getElementById(obj8);
-  var objC9 = document.getElementById(obj9);
-  var objC10 = document.getElementById(obj10);
-  var objC11 = document.getElementById(obj11);
-  var objC12 = document.getElementById(obj12);
-  var objC13 = document.getElementById(obj13);
-  var objC14 = document.getElementById(obj14);
-  var objC15 = document.getElementById(obj15);
-  var objC16 = document.getElementById(obj16);
-
-  objC1.childNodes[1].setAttribute("src",arraySorteado[0]);
-  objC2.childNodes[1].setAttribute("src",arraySorteado[1]);
-  objC3.childNodes[1].setAttribute("src",arraySorteado[2]);
-  objC4.childNodes[1].setAttribute("src",arraySorteado[3]);
-  objC5.childNodes[1].setAttribute("src",arraySorteado[4]);
-  objC6.childNodes[1].setAttribute("src",arraySorteado[5]);
-  objC7.childNodes[1].setAttribute("src",arraySorteado[6]);
-  objC8.childNodes[1].setAttribute("src",arraySorteado[7]);
-  objC9.childNodes[1].setAttribute("src",arraySorteado[8]);
-  objC10.childNodes[1].setAttribute("src",arraySorteado[9]);
-  objC11.childNodes[1].setAttribute("src",arraySorteado[10]);
-  objC12.childNodes[1].setAttribute("src",arraySorteado[11]);
-  objC13.childNodes[1].setAttribute("src",arraySorteado[12]);
-  objC14.childNodes[1].setAttribute("src",arraySorteado[13]);
-  objC15.childNodes[1].setAttribute("src",arraySorteado[14]);
-  objC16.childNodes[1].setAttribute("src",arraySorteado[15]);
-
+  arrayObjSorteado['carta1']=arraySorteado[0];
+  arrayObjSorteado['carta2']=arraySorteado[1];
+  arrayObjSorteado['carta3']=arraySorteado[2];
+  arrayObjSorteado['carta4']=arraySorteado[3];
+  arrayObjSorteado['carta5']=arraySorteado[4];
+  arrayObjSorteado['carta6']=arraySorteado[5];
+  arrayObjSorteado['carta7']=arraySorteado[6];
+  arrayObjSorteado['carta8']=arraySorteado[7];
+  arrayObjSorteado['carta9']=arraySorteado[8];
+  arrayObjSorteado['carta10']=arraySorteado[9];
+  arrayObjSorteado['carta11']=arraySorteado[10];
+  arrayObjSorteado['carta12']=arraySorteado[11];
+  arrayObjSorteado['carta13']=arraySorteado[12];
+  arrayObjSorteado['carta14']=arraySorteado[13];
+  arrayObjSorteado['carta15']=arraySorteado[14];
+  arrayObjSorteado['carta16']=arraySorteado[15];
 }
 
 function verificaArray(carta,array){
@@ -91,7 +75,21 @@ function verificaArray(carta,array){
 }
 
 
-function roda(nomeObj){
+function vira(nomeObj){
   var obj = document.getElementById(nomeObj);
-  objFilho = obj.childNodes[0];
-}
+  var objFilho=obj.childNodes[1];
+  if(objFilho.getAttribute('src')=="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg"){
+    obj.setAttribute("class","thumbnail viraCartaPraFrente1");
+    setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraFrente2");},
+                          500);
+    setTimeout(function(){objFilho.setAttribute("src",arrayObjSorteado[nomeObj])},
+                          500);
+  }else{
+    obj.setAttribute("class","thumbnail viraCartaPraFrente1");
+    setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraTras1");},
+                          500);
+    setTimeout(function(){objFilho.setAttribute("src","http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg")},
+                          500);
+  }
+
+  }
