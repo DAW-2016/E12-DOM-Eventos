@@ -76,20 +76,31 @@ function verificaArray(carta,array){
 
 
 function vira(nomeObj){
-  var obj = document.getElementById(nomeObj);
-  var objFilho=obj.childNodes[1];
-  if(objFilho.getAttribute('src')=="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg"){
-    obj.setAttribute("class","thumbnail viraCartaPraFrente1");
-    setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraFrente2");},
-                          300);
-    setTimeout(function(){objFilho.setAttribute("src",arrayObjSorteado[nomeObj])},
-                          300);
-  }else{
-    obj.setAttribute("class","thumbnail viraCartaPraFrente1");
-    setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraTras1");},
-                          300);
-    setTimeout(function(){objFilho.setAttribute("src","http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg")},
-                          300);
+    var obj = document.getElementById(nomeObj);
+    var objFilho=obj.childNodes[1];
+    if(objFilho.getAttribute('src')=="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg"){
+      obj.setAttribute("class","thumbnail viraCartaPraFrente1");
+      setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraFrente2");},
+                            300);
+      setTimeout(function(){objFilho.setAttribute("src",arrayObjSorteado[nomeObj])},
+                            300);
+    }else{
+      obj.setAttribute("class","thumbnail viraCartaPraFrente1");
+      setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraTras1");},
+                            300);
+      setTimeout(function(){objFilho.setAttribute("src","http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg")},
+                            300);
+    }
   }
 
-  }
+function treme(nomeObj){
+  var obj = document.getElementById(nomeObj);
+  obj.setAttribute("class","thumbnail tremeDireita");
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},100);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeDireita");},200);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},300);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeDireita");},400);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},500);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeDireita");},600);
+  setTimeout(function(){obj.setAttribute("class","thumbnail naoTreme");},700);
+}

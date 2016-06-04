@@ -1,3 +1,22 @@
+/*Treme cartas*/
+.tremeEsquerda{
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  transition: 0.1s;
+  }
+.tremeDireita{
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  transition: 0.1s;
+  }
+.naoTreme{
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: 0.1s;
+}
 /*Roda cartas*/
 .viraCartaPraFrente1{
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
