@@ -1,5 +1,14 @@
 var arrayObjSorteado = [];
 
+var arrayCompEndereco = [];
+var arrayCompNomeObj = [];
+var arrayNomeIcon = [];
+var arrayCartasCertas = [];
+var contCartasEncontradas=0;
+var contadorCarta=0;
+var contadorClica=0;
+var count2=0;
+
 function sorteia(obj1,obj2,obj3,obj4,obj5,obj6,obj7,obj8,obj9,obj10,obj11,obj12,obj13,obj14,obj15,obj16){
   var carta1 = "fotos/sla.jpg";
   var carta2 = "fotos/caribe.jpg";
@@ -41,10 +50,6 @@ function sorteia(obj1,obj2,obj3,obj4,obj5,obj6,obj7,obj8,obj9,obj10,obj11,obj12,
     }
   }
 
-  for(var i = 0; i < arraySorteado.length; i++){
-    console.log(arraySorteado[i]);
-  }
-
   arrayObjSorteado['carta1']=arraySorteado[0];
   arrayObjSorteado['carta2']=arraySorteado[1];
   arrayObjSorteado['carta3']=arraySorteado[2];
@@ -75,32 +80,72 @@ function verificaArray(carta,array){
 }
 
 
-function vira(nomeObj){
+function clicou(nomeObj,icon){
     var obj = document.getElementById(nomeObj);
     var objFilho=obj.childNodes[1];
     if(objFilho.getAttribute('src')=="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg"){
-      obj.setAttribute("class","thumbnail viraCartaPraFrente1");
-      setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraFrente2");},
-                            300);
-      setTimeout(function(){objFilho.setAttribute("src",arrayObjSorteado[nomeObj])},
-                            300);
-    }else{
-      obj.setAttribute("class","thumbnail viraCartaPraFrente1");
-      setTimeout(function(){obj.setAttribute("class","thumbnail viraCartaPraTras1");},
-                            300);
-      setTimeout(function(){objFilho.setAttribute("src","http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg")},
-                            300);
+      obj.setAttribute("class","thumbnail viraCarta1");
+      setTimeout(function(){obj.setAttribute("class","thumbnail viraCarta2");},300);
+      setTimeout(function(){objFilho.setAttribute("src",arrayObjSorteado[nomeObj])},300);
+
+      if(count2<2){
+          arrayCompEndereco[count2] = arrayObjSorteado[nomeObj];
+          arrayCompNomeObj[count2] = nomeObj;
+          arrayNomeIcon[count2] = icon;
+          console.log(icon);
+          count2++;
+      }
+      if(count2==2){
+        count2=0;
+        if(arrayCompEndereco[0]==arrayCompEndereco[1]){
+          arrayCartasCertas[contCartasEncontradas]=arrayCompEndereco[0];
+          contCartasEncontradas++;
+
+          var cartaCerta1 = document.getElementById(arrayCompNomeObj[0]);
+          var iconeCerto1 = document.getElementById(arrayNomeIcon[0]);
+          var cartaCerta2 = document.getElementById(arrayCompNomeObj[1]);
+          var iconeCerto2 = document.getElementById(arrayNomeIcon[1]);
+
+          setTimeout(function(){iconeCerto1.setAttribute("class","fa fa-check-square-o fa-5x texto-verde someBloco");},1350);
+          setTimeout(function(){iconeCerto2.setAttribute("class","fa fa-check-square-o fa-5x texto-verde someBloco");},1350);
+
+          setTimeout(function(){cartaCerta1.setAttribute("class","thumbnail someBloco");},1350);
+          setTimeout(function(){cartaCerta2.setAttribute("class","thumbnail someBloco");},1350);
+          setTimeout(function(){cartaCerta1.setAttribute("class","thumbnail desaparece");},1700);
+          setTimeout(function(){cartaCerta2.setAttribute("class","thumbnail desaparece");},1700);
+
+          setTimeout(function(){iconeCerto1.setAttribute("class","fa fa-check-square-o fa-5x texto-verde voltaBloco aparece");},1750);
+          setTimeout(function(){iconeCerto2.setAttribute("class","fa fa-check-square-o fa-5x texto-verde voltaBloco aparece");},1750);
+        }else{
+          setTimeout(function(){treme(arrayCompNomeObj[0])},650);
+          setTimeout(function(){treme(arrayCompNomeObj[1])},650);
+
+          var cartaErrada1 = document.getElementById(arrayCompNomeObj[0]);
+          var cartaImgErrada1 = cartaErrada1.childNodes[1];
+          var cartaErrada2 = document.getElementById(arrayCompNomeObj[1]);
+          var cartaImgErrada2 = cartaErrada2.childNodes[1];
+
+          setTimeout(function(){cartaErrada1.setAttribute("class","thumbnail viraCarta1");},1550);
+          setTimeout(function(){cartaImgErrada1.setAttribute("src","http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg")},1850);
+          setTimeout(function(){cartaErrada1.setAttribute("class","thumbnail viraCarta2");},1850);
+
+          setTimeout(function(){cartaErrada2.setAttribute("class","thumbnail viraCarta1");},1550);
+          setTimeout(function(){cartaImgErrada2.setAttribute("src","http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg")},1850);
+          setTimeout(function(){cartaErrada2.setAttribute("class","thumbnail viraCarta2");},1850);
+        }
+      }
     }
   }
 
 function treme(nomeObj){
   var obj = document.getElementById(nomeObj);
   obj.setAttribute("class","thumbnail tremeDireita");
-  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},100);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},50);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeDireita");},100);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},150);
   setTimeout(function(){obj.setAttribute("class","thumbnail tremeDireita");},200);
-  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},300);
-  setTimeout(function(){obj.setAttribute("class","thumbnail tremeDireita");},400);
-  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},500);
-  setTimeout(function(){obj.setAttribute("class","thumbnail tremeDireita");},600);
-  setTimeout(function(){obj.setAttribute("class","thumbnail naoTreme");},700);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeEsquerda");},250);
+  setTimeout(function(){obj.setAttribute("class","thumbnail tremeDireita");},300);
+  setTimeout(function(){obj.setAttribute("class","thumbnail naoTreme");},350);
+  setTimeout(function(){obj.setAttribute("class","thumbnail viraCarta2");},400);
 }

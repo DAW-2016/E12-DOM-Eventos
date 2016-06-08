@@ -1,49 +1,73 @@
-/*Treme cartas*/
-.tremeEsquerda{
-  -webkit-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  transform: rotate(2deg);
-  transition: 0.1s;
-  }
-.tremeDireita{
-  -webkit-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-  transition: 0.1s;
-  }
-.naoTreme{
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  transition: 0.1s;
-}
-/*Roda cartas*/
-.viraCartaPraFrente1{
+/*Some com cartas e mostra que marcou o ponto*/
+.someBloco{
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(0, 1);
-  -ms-transform: scale(0, 1);
-  transform: scale(0, 1);
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
   transition: 0.3s;
 }
-.viraCartaPraFrente2{
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-  transition: 0.3s;
-}
-.viraCartaPraTras1{
+.voltaBloco{
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   transform: scale(1, 1);
   transition: 0.3s;
 }
+.aparece{
+  line-height: 270px;
+}
+.desaparece{
+  display: none;
+  transition: 0.3s;
+}
 
+/*Treme cartas*/
+.tremeEsquerda{
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  transition: 0.05s;
+  }
+.tremeDireita{
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  transition: 0.05s;
+  }
+.naoTreme{
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: 0.05s;
+}
+/*Roda cartas*/
+.viraCarta1{
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  transition: 0.3s;
+}
+.viraCarta2{
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition: 0.3s;
+}
+}
 /*Modificação na classe navbar*/
+@media(min-width: 768px){
+  .navbar {
+      border-radius:0;
+  }
+}
+.navbar-default {
+    border:0px;;
+}
 .navbar{
   border-radius: 0px;
-  border: 0px;
+  border: 0;
   font-weight: bolder;
 }
 
