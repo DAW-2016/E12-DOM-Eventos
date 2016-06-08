@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Latest compiled and minified Bootstrap's JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <!--Link para os ícones do font awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Versão de modificação do css feito por mim -->
+    <link rel="stylesheet" href="stylesheet.css" media="screen">
+    <title>Exercícios</title>
+  </head>
+
+  <body onload="sorteia('carta1','carta2','carta3','carta4',
+                            'carta5','carta6','carta7','carta8',
+                            'carta9','carta10','carta11','carta12',
+                            'carta13','carta14','carta15','carta16');">
+      <nav class="navbar navbar-default vermelho2">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><span class="texto-branco">Site</span></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="ativo"><a href="#"><span class="texto-branco">Home</span></a></li>
+            <li><a href="jogoDaMemoria.html"><span class="texto-branco">Jogo da memória</span></a></li>
+            <li><a href="#"><span class="texto-branco">Alguma outra coisa</span></a></li>
+            <li><a href="#"><span class="texto-branco">Qualquer coisa</span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="vermelho1 texto-branco jumbotron">
+            <h1>DOM: javascript</h1>
+            <p>Jogo da memória</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-header">
+              <h1>Jogo da memória <small>tá show</small></h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta1','deuBom1')" id="carta1">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom1" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta2','deuBom2')" id="carta2">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom2" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta3','deuBom3')" id="carta3">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom3" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta4','deuBom4')" id="carta4">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom4" aria-hidden="true"></i></center>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta5','deuBom5')" id="carta5">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom5" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta6','deuBom6')" id="carta6">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom6" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta7','deuBom7')" id="carta7">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom7" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta8','deuBom8')" id="carta8">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom8" aria-hidden="true"></i></center>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta9','deuBom9')" id="carta9">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom9" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta10','deuBom10')" id="carta10">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom10" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta11','deuBom11')" id="carta11">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom11" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta12','deuBom12')" id="carta12">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom12" aria-hidden="true"></i></center>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta13','deuBom13')" id="carta13">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom13" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta14','deuBom14')" id="carta14">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom14" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta15','deuBom15')" id="carta15">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom15" aria-hidden="true"></i></center>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <a class="thumbnail" onclick="clicou('carta16','deuBom16')" id="carta16">
+              <img src="http://2.bp.blogspot.com/-KIou3WR4baU/UPMH8fJIqjI/AAAAAAAAA8M/PZttE_AKE9Q/s1600/Paus.jpg">
+            </a>
+            <center><i class="fa fa-check-square-o fa-5x desaparece texto-verde" id="deuBom16" aria-hidden="true"></i></center>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container-fluid rodape vermelho1">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <center><i class="fa fa-bolt fa-3x texto-branco" aria-hidden="true"></i><h3 class="texto-branco">Raio</h3></center>
+          <p class="justify texto-branco">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <center><i class="fa fa-cloud-download fa-3x texto-branco" aria-hidden="true"></i><h3 class="texto-branco">Nuvem</h3></center>
+          <p class="justify texto-branco">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <center><i class="fa fa-bug fa-spin fa-3x texto-branco" aria-hidden="true"></i><h3 class="texto-branco">Bichinho</h3></center>
+          <p class="justify texto-branco">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <center><i class="fa fa-bell-o fa-3x texto-branco" aria-hidden="true"></i><h3 class="texto-branco">Sino</h3></center>
+          <p class="justify texto-branco">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid vermelho2 rodapezinho">
+      <small><span class="texto-branco">Feito por Alan Borges</span></small>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  </body>
+  <script type="text/javascript" src="jogoDaMemoria.js">
+  </script>
+</html>

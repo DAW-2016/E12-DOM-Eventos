@@ -1,0 +1,136 @@
+/*Some com cartas e mostra que marcou o ponto*/
+.someBloco{
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+  transition: 0.3s;
+}
+.voltaBloco{
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition: 0.3s;
+}
+.aparece{
+  line-height: 270px;
+}
+.desaparece{
+  display: none;
+  transition: 0.3s;
+}
+
+/*Treme cartas*/
+.tremeEsquerda{
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  transition: 0.05s;
+  }
+.tremeDireita{
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  transition: 0.05s;
+  }
+.naoTreme{
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: 0.05s;
+}
+/*Roda cartas*/
+.viraCarta1{
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  transition: 0.3s;
+}
+.viraCarta2{
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition: 0.3s;
+}
+}
+/*Modificação na classe navbar*/
+@media(min-width: 768px){
+  .navbar {
+      border-radius:0;
+  }
+}
+.navbar-default {
+    border:0px;;
+}
+.navbar{
+  border-radius: 0px;
+  border: 0;
+  font-weight: bolder;
+}
+
+.ativo{
+  background-color: #c62828;
+}
+
+/*Modificação na classe jumbotron*/
+.container .jumbotron,
+.container-fluid .jumbotron{
+  border-radius: 0px;
+  margin-top: -20px;
+  padding-left: 6.5%;
+}
+
+/*Modificação na velocidade da fa-spin*/
+.fa-spin {
+  -webkit-animation: fa-spin 0.7s infinite linear;
+  animation: fa-spin 0.7s infinite linear;
+}
+
+/*Formulários*/
+.form-control{
+  height: 42px;
+}
+
+/*Parte dedicada a texto*/
+.justify{
+  text-align: justify;
+}
+
+/*Parte dedicada a cores de containers*/
+.vermelho1{
+  background-color: #d50000;
+}
+.vermelho2{
+  background-color: #b71c1c;
+}
+.branco{
+  background-color: #efebe9;
+}
+
+/*Parte dedicada a cores de texto*/
+.texto-vermelho{
+  color: #d50000 ;
+}
+.texto-branco{
+  color: #efebe9;
+}
+.texto-verde{
+  color: #00c853;
+}
+
+/*Rodape*/
+.rodape{
+  margin-top: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.rodapezinho{
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 3.5%;
+  font-weight: bolder;
+
+}
